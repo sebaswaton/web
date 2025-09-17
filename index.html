@@ -304,10 +304,10 @@
         
         function displayPDF() {
             const pdfViewer = document.getElementById('pdfViewer');
-            // CORREGIDO: Función que muestra el PDF correctamente
+            // Use local PDF.js viewer with disabled download and print functionality
             pdfViewer.innerHTML = `
                 <iframe class="pdf-frame" 
-                        src="${PDF_URL}" 
+                        src="pdfjs/web/viewer.html?file=monki.pdf" 
                         title="Secure PDF Viewer" 
                         frameborder="0" 
                         allow="autoplay">
